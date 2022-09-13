@@ -1,0 +1,22 @@
+{
+	"name": "UserMessage",
+    "base": "PersistedModel",
+    "idInjection": false,
+  	"properties": {
+        "title" : {
+            "type" : "String",
+            "required" : true
+        },
+        "message" : {
+            "type" : "String",
+            "required" : true
+        },
+        "userId" : {
+            "type" : "String"
+        },
+        "receiverUserId" : {
+            "type" : "String",
+            "required" : true
+        }
+    }
+}

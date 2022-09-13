@@ -1,0 +1,7 @@
+{
+	"name": "Testing",
+	"base": "Model",
+	"description": "For testing a file",
+	"properties": {   
+	}
+}

@@ -1,0 +1,126 @@
+05-07 18:45:32.024 31016-4197/com.example.kpraveen.myteam D/TeamApplication: Execute Alarm 
+05-07 18:45:32.036 31016-4197/com.example.kpraveen.myteam D/TeamApplication: activity WakeLockAlarm 18:45:32
+05-07 18:50:33.399 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationJobSerivce onStartJob
+05-07 18:50:33.402 31016-31016/com.example.kpraveen.myteam D/TeamApplication: activity LocationJob3 18:50:33
+05-07 18:50:35.430 31016-31016/com.example.kpraveen.myteam D/TeamApplication: Location result received (in Job) 0
+05-07 18:50:35.437 31016-31016/com.example.kpraveen.myteam D/TeamApplication: posting on main thread  true
+05-07 18:50:35.439 31016-31016/com.example.kpraveen.myteam D/TeamApplication: postingData {"latitude":12.9048374,"longitude":77.6000514,"name":"praveen","currentTime":1525699235435,"locationTime":1525699234642,"time":1525699235435,"type":"LocationResult","pkgtype":"LocationJobService","gpsRequest":true,"hasSpeed":false,"provider":"fused","accuracy":28.246000289916992,"justtime":"18:50:35"}
+05-07 18:50:35.441 31016-31016/com.example.kpraveen.myteam D/TeamApplication: stop location job
+05-07 18:50:36.477 31016-31016/com.example.kpraveen.myteam I/TeamApplication: location posting response200
+05-07 18:50:36.478 31016-31016/com.example.kpraveen.myteam D/TeamApplication: posting response on main thread  true
+05-07 18:58:53.009 31016-5185/com.example.kpraveen.myteam D/TeamApplication: InformationUpdateRequest 0:1525699727433606%6ca55c5af9fd7ecd
+05-07 18:58:53.035 31016-5185/com.example.kpraveen.myteam D/TeamApplication: activity InformationUpdateRequestReceived 18:58:53
+05-07 18:58:53.049 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onCreate
+05-07 18:58:53.076 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onStartCmd
+05-07 18:58:53.141 31016-31016/com.example.kpraveen.myteam D/TeamApplication: Location result received (service)..  0
+05-07 18:58:53.865 31016-31016/com.example.kpraveen.myteam I/TeamApplication: location posting response200
+05-07 18:58:53.890 31016-31016/com.example.kpraveen.myteam D/TeamApplication: destroy Location service
+05-07 19:00:31.539 31016-5428/com.example.kpraveen.myteam D/TeamApplication: Execute Alarm 
+05-07 19:00:31.550 31016-5428/com.example.kpraveen.myteam D/TeamApplication: activity WakeLockAlarm 19:00:31
+05-07 19:07:57.668 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onCreate
+05-07 19:07:57.676 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onStartCmd
+05-07 19:07:57.878 31016-31016/com.example.kpraveen.myteam D/TeamApplication: Location result received (service)..  0
+05-07 19:07:58.464 31016-31016/com.example.kpraveen.myteam D/TeamApplication: fetchContactsInfo result received 
+05-07 19:07:58.737 31016-31016/com.example.kpraveen.myteam I/TeamApplication: location posting response200
+05-07 19:07:58.756 31016-31016/com.example.kpraveen.myteam D/TeamApplication: destroy Location service
+05-07 19:08:00.283 31016-31016/com.example.kpraveen.myteam D/TeamApplication: click Ashu
+05-07 19:08:00.679 31016-31016/com.example.kpraveen.myteam D/TeamApplication: activity ViewContact 19:08:00
+05-07 19:08:00.686 31016-31016/com.example.kpraveen.myteam D/TeamApplication: map activity onResume
+05-07 19:08:00.722 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onCreate
+05-07 19:08:00.729 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onStartCmd
+05-07 19:08:00.811 31016-31016/com.example.kpraveen.myteam D/TeamApplication: Location result received (service)..  0
+05-07 19:08:04.666 31016-31016/com.example.kpraveen.myteam I/TeamApplication: location posting response200
+05-07 19:08:04.674 31016-31016/com.example.kpraveen.myteam D/TeamApplication: destroy Location service
+05-07 19:08:07.330 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationJobSerivce onStartJob
+05-07 19:08:07.333 31016-31016/com.example.kpraveen.myteam D/TeamApplication: activity LocationJob3 19:08:07
+05-07 19:08:08.627 31016-31016/com.example.kpraveen.myteam D/TeamApplication: Location result received (in Job) 0
+05-07 19:08:08.631 31016-31016/com.example.kpraveen.myteam D/TeamApplication: posting on main thread  true
+    postingData {"latitude":12.9049107,"longitude":77.6003436,"name":"praveen","currentTime":1525700288629,"locationTime":1525700288579,"time":1525700288629,"type":"LocationResult","pkgtype":"LocationJobService","gpsRequest":true,"hasSpeed":false,"provider":"fused","accuracy":29.632999420166016,"justtime":"19:08:08"}
+05-07 19:08:08.632 31016-31016/com.example.kpraveen.myteam D/TeamApplication: stop location job
+05-07 19:08:12.757 31016-31016/com.example.kpraveen.myteam D/TeamApplication: activity StopViewContact 19:08:12
+05-07 19:08:12.845 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onCreate
+05-07 19:08:12.854 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onStartCmd
+05-07 19:08:13.755 31016-31016/com.example.kpraveen.myteam D/TeamApplication: click Atul
+05-07 19:08:14.047 31016-31016/com.example.kpraveen.myteam D/TeamApplication: activity ViewContact 19:08:14
+05-07 19:08:14.052 31016-31016/com.example.kpraveen.myteam D/TeamApplication: map activity onResume
+05-07 19:08:14.094 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onStartCmd
+05-07 19:08:14.160 31016-31016/com.example.kpraveen.myteam D/TeamApplication: Location result received (service)..  0
+05-07 19:08:14.904 31016-31016/com.example.kpraveen.myteam D/TeamApplication: activity StopViewContact 19:08:14
+05-07 19:08:14.956 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onStartCmd
+05-07 19:08:15.484 31016-31016/com.example.kpraveen.myteam I/TeamApplication: location posting response200
+05-07 19:08:15.484 31016-31016/com.example.kpraveen.myteam D/TeamApplication: posting response on main thread  true
+05-07 19:08:16.508 31016-31016/com.example.kpraveen.myteam D/TeamApplication: click Ashu
+05-07 19:08:16.794 31016-31016/com.example.kpraveen.myteam D/TeamApplication: activity ViewContact 19:08:16
+05-07 19:08:16.799 31016-31016/com.example.kpraveen.myteam D/TeamApplication: map activity onResume
+05-07 19:08:16.835 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onStartCmd
+05-07 19:08:17.561 31016-31016/com.example.kpraveen.myteam D/TeamApplication: activity StopViewContact 19:08:17
+05-07 19:08:17.609 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onStartCmd
+05-07 19:08:18.395 31016-31016/com.example.kpraveen.myteam D/TeamApplication: fetchContactsInfo result received 
+05-07 19:08:19.038 31016-31016/com.example.kpraveen.myteam I/TeamApplication: location posting response200
+05-07 19:08:19.067 31016-31016/com.example.kpraveen.myteam D/TeamApplication: destroy Location service
+05-07 19:08:19.806 31016-31016/com.example.kpraveen.myteam D/TeamApplication: fetchContactsInfo result received 
+05-07 19:08:22.103 31016-31016/com.example.kpraveen.myteam D/TeamApplication: Splash Activity
+05-07 19:08:22.220 31016-31016/com.example.kpraveen.myteam D/TeamApplication: activity TeamAppMainActivity 19:08:22
+05-07 19:08:22.245 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onCreate
+05-07 19:08:22.252 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onStartCmd
+05-07 19:08:22.416 31016-31016/com.example.kpraveen.myteam D/TeamApplication: Location result received (service)..  0
+05-07 19:08:25.492 31016-31016/com.example.kpraveen.myteam D/TeamApplication: click shashi
+05-07 19:08:25.761 31016-31016/com.example.kpraveen.myteam D/TeamApplication: activity ViewContact 19:08:25
+05-07 19:08:25.767 31016-31016/com.example.kpraveen.myteam D/TeamApplication: map activity onResume
+05-07 19:08:25.802 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onStartCmd
+05-07 19:08:28.009 31016-31016/com.example.kpraveen.myteam D/TeamApplication: activity StopViewContact 19:08:28
+05-07 19:08:28.079 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onStartCmd
+05-07 19:08:30.409 31016-31016/com.example.kpraveen.myteam I/TeamApplication: location posting response200
+05-07 19:08:30.416 31016-31016/com.example.kpraveen.myteam D/TeamApplication: destroy Location service
+05-07 19:08:30.626 31016-31016/com.example.kpraveen.myteam D/TeamApplication: click Praveen
+05-07 19:08:30.895 31016-31016/com.example.kpraveen.myteam D/TeamApplication: activity ViewContact 19:08:30
+05-07 19:08:30.902 31016-31016/com.example.kpraveen.myteam D/TeamApplication: map activity onResume
+05-07 19:08:30.934 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onCreate
+05-07 19:08:30.942 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onStartCmd
+05-07 19:08:31.081 31016-31016/com.example.kpraveen.myteam D/TeamApplication: Location result received (service)..  0
+05-07 19:08:31.472 31016-31016/com.example.kpraveen.myteam D/TeamApplication: activity StopViewContact 19:08:31
+05-07 19:08:31.549 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onStartCmd
+05-07 19:08:32.572 31016-31016/com.example.kpraveen.myteam D/TeamApplication: fetchContactsInfo result received 
+05-07 19:08:33.376 31016-6599/com.example.kpraveen.myteam D/TeamApplication: InformationUpdateRequest 0:1525700308304146%6ca55c5af9fd7ecd
+05-07 19:08:33.379 31016-6599/com.example.kpraveen.myteam D/TeamApplication: activity InformationUpdateRequestReceived 19:08:33
+05-07 19:08:33.386 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onStartCmd
+05-07 19:08:33.387 31016-31016/com.example.kpraveen.myteam I/TeamApplication: location posting response200
+05-07 19:08:33.411 31016-31016/com.example.kpraveen.myteam D/TeamApplication: destroy Location service
+05-07 19:08:33.773 31016-31016/com.example.kpraveen.myteam D/TeamApplication: fetchContactsInfo result received 
+05-07 19:08:39.658 31016-31016/com.example.kpraveen.myteam D/TeamApplication: fetchContactsInfo result received 
+05-07 19:08:59.074 31016-31016/com.example.kpraveen.myteam D/TeamApplication: Splash Activity
+05-07 19:08:59.179 31016-31016/com.example.kpraveen.myteam D/TeamApplication: activity TeamAppMainActivity 19:08:59
+05-07 19:08:59.204 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onCreate
+05-07 19:08:59.214 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationService onStartCmd
+05-07 19:08:59.400 31016-31016/com.example.kpraveen.myteam D/TeamApplication: Location result received (service)..  0
+05-07 19:09:19.267 31016-31016/com.example.kpraveen.myteam D/TeamApplication: destroy Location service
+05-07 19:09:37.058 31016-31016/com.example.kpraveen.myteam I/TeamApplication: location posting response200
+05-07 19:09:41.462 31016-31016/com.example.kpraveen.myteam D/TeamApplication: fetchContactsInfo result received 
+05-07 19:09:52.363 31016-31016/com.example.kpraveen.myteam D/TeamApplication: fetchContactsInfo result received 
+05-07 19:15:32.035 31016-7286/com.example.kpraveen.myteam D/TeamApplication: Execute Alarm 
+05-07 19:15:32.048 31016-7286/com.example.kpraveen.myteam D/TeamApplication: activity WakeLockAlarm 19:15:32
+05-07 19:15:32.051 31016-7286/com.example.kpraveen.myteam D/TeamApplication: Network not available
+05-07 19:24:03.168 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationJobSerivce onStartJob
+05-07 19:24:03.172 31016-31016/com.example.kpraveen.myteam D/TeamApplication: activity LocationJob3 19:24:03
+05-07 19:24:03.173 31016-31016/com.example.kpraveen.myteam D/TeamApplication: Network not available
+05-07 19:24:03.275 31016-31016/com.example.kpraveen.myteam D/TeamApplication: Location result received (in Job) 0
+05-07 19:24:03.280 31016-31016/com.example.kpraveen.myteam D/TeamApplication: posting on main thread  true
+    postingData {"latitude":12.9046915,"longitude":77.6004302,"name":"praveen","currentTime":1525701243278,"locationTime":1525701243255,"time":1525701243278,"type":"LocationResult","pkgtype":"LocationJobService","gpsRequest":true,"hasSpeed":false,"provider":"fused","accuracy":34.834999084472656,"justtime":"19:24:03"}
+05-07 19:24:03.281 31016-31016/com.example.kpraveen.myteam D/TeamApplication: stop location job
+05-07 19:29:22.469 31016-31016/com.example.kpraveen.myteam E/TeamApplication: location posting error com.android.volley.NoConnectionError: java.net.SocketException: Software caused connection abort
+05-07 19:30:32.025 31016-8171/com.example.kpraveen.myteam D/TeamApplication: Execute Alarm 
+05-07 19:30:32.031 31016-8171/com.example.kpraveen.myteam D/TeamApplication: activity WakeLockAlarm 19:30:32
+05-07 19:30:32.032 31016-8171/com.example.kpraveen.myteam D/TeamApplication: Network not available
+05-07 19:40:46.763 31016-31016/com.example.kpraveen.myteam D/TeamApplication: LocationJobSerivce onStartJob
+05-07 19:40:46.767 31016-31016/com.example.kpraveen.myteam D/TeamApplication: activity LocationJob3 19:40:46
+05-07 19:40:46.768 31016-31016/com.example.kpraveen.myteam D/TeamApplication: Network not available
+05-07 19:40:46.805 31016-31016/com.example.kpraveen.myteam D/TeamApplication: Location result received (in Job) 0
+05-07 19:40:46.814 31016-31016/com.example.kpraveen.myteam D/TeamApplication: posting on main thread  true
+    postingData {"latitude":12.9046358,"longitude":77.6004335,"name":"praveen","currentTime":1525702246812,"locationTime":1525702246803,"time":1525702246812,"type":"LocationResult","pkgtype":"LocationJobService","gpsRequest":true,"hasSpeed":false,"provider":"fused","accuracy":32.49399948120117,"justtime":"19:40:46"}
+05-07 19:40:46.819 31016-31016/com.example.kpraveen.myteam D/TeamApplication: stop location job
+05-07 19:40:46.911 31016-31016/com.example.kpraveen.myteam D/TeamApplication: Network not available
+05-07 19:45:06.299 31016-31016/com.example.kpraveen.myteam E/TeamApplication: location posting error com.android.volley.NoConnectionError: java.net.SocketException: Software caused connection abort
+05-07 19:45:31.539 31016-8950/com.example.kpraveen.myteam D/TeamApplication: Execute Alarm 
+05-07 19:45:31.545 31016-8950/com.example.kpraveen.myteam D/TeamApplication: activity WakeLockAlarm 19:45:31
+05-07 19:45:31.547 31016-8950/com.example.kpraveen.myteam D/TeamApplication: Network not available
+05-07 19:53:04.460 31016-31016/com.example.kpraveen.myteam D/TeamApplication: activity PowerEventBroadcast 19:53:04

@@ -1,0 +1,75 @@
+{
+	"name": "UserConfiguration",
+    "base": "PersistedModel",
+    "plural" : "UserConfiguration",
+    "idInjection": false,
+    "properties": {
+        "useGPS" : {
+            "type" : "Boolean",
+            "default" : true
+        },
+        "useNetwork" : {
+            "type" : "Boolean",
+            "default" : true
+        },
+        "peakIntervalInMinutes" : {
+            "type" : "Number",
+            "default" : 30
+        },
+        "nonPeakIntervalInMinutes" : {
+            "type" : "Number",
+            "default" : 90
+        },
+        "userId" : {
+            "type" : "String",
+            "description" : ""
+        },
+        "homeWifiSsid" : {
+            "type" : "String",
+            "description" : "nonblank123"
+        },
+        "userName" : {
+            "type" : "String",
+            "description" : ""
+        }
+    },
+    "relations": {
+        "user": {
+            "type": "belongsTo",
+            "model": "AppUser",
+            "primaryKey" : "id",
+            "foreignKey" : "userId"
+        }
+    },
+    "acls": [
+        {
+            "principalType": "ROLE",
+            "principalId": "$everyone",
+            "permission": "ALLOW",
+            "property": "*",
+            "accessType": "READ"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$owner",
+            "permission": "ALLOW",
+            "property": "*",
+            "accessType": "*"          
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$authenticated",
+            "permission": "ALLOW",
+            "property": "findById",
+            "accessType": "*",
+            "description" : "Temporary till we use relation or owner or datacl"          
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "admin",
+            "permission": "ALLOW",
+            "property": "*",
+            "accessType": "*"          
+        }
+    ]
+}

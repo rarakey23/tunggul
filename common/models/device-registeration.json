@@ -1,0 +1,17 @@
+{
+	"name": "DeviceRegistration",
+    "base": "PersistedModel",
+    "idInjection": false,
+ 	"properties": {
+        "deviceToken" : {
+            "type" : "String",
+            "required" : true
+        },
+        "userId" : {
+            "type" : "String"
+        },
+        "time" : {
+            "type" : "Date"
+        }
+    }
+}

@@ -1,0 +1,147 @@
+{
+    "name": "AppUser",
+    "plural": "Users",
+    "base": "BaseUser",
+    "idInjection": false,
+    "ttl" : 31536000,
+    "maxTTL" : 32536000,
+    "options": {
+        "validateUpsert": true,
+        "ttl" : 33536000,
+        "maxTTL" : 34536000
+    },
+    "properties": {
+        "phone": {
+            "type": "String"
+        },
+        "team": {
+            "type": "String"
+        },
+        "deviceToken" : {
+            "type" : "String"
+        },
+	    "online" : {
+    		"type" : "Boolean"
+	    }
+    },
+    "relations": {
+        "contacts": {
+            "type": "hasMany",
+            "model": "Contact",
+            "foreignKey": "ownerUserId"
+        },
+        "configuration": {
+            "type": "hasOne",
+            "model": "UserConfiguration",
+            "foreignKey": "userId"
+        },
+        "swipeConfiguration": {
+            "type": "hasOne",
+            "model": "SwipeConfiguration",
+            "foreignKey": "userId"
+        },
+        "swipeData": {
+            "type": "hasMany",
+            "model": "SwipeData",
+            "foreignKey": "userId"
+        },
+        "jobs": {
+            "type": "hasMany",
+            "model": "Job",
+            "foreignKey": "userId"
+        }
+    },
+    "acls": [
+        {
+            "principalType": "ROLE",
+            "principalId": "$everyone",
+            "permission": "DENY",
+            "property": "*",
+            "accessType": "*"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$authenticated",
+            "permission": "DENY",
+            "property": "*",
+            "accessType": "*"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$unauthenticated",
+            "permission": "DENY",
+            "property": "*",
+            "accessType": "*"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$everyone",
+            "permission": "DENY",
+            "property": "create",
+            "accessType": "*"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "admin",
+            "permission": "ALLOW",
+            "property": "*",
+            "accessType": "*"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "admin",
+            "permission": "ALLOW",
+            "property": "create",
+            "accessType": "WRITE"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "admin",
+            "permission": "ALLOW",
+            "property": "update",
+            "accessType": "WRITE"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$owner",
+            "permission": "ALLOW",
+            "property": "data",
+            "accessType": "READ"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$owner",
+            "permission": "ALLOW",
+            "property": "__get__configuration",
+            "accessType": "READ"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$owner",
+            "permission": "ALLOW",
+            "accessType": "READ",
+            "property": "__get__jobs"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$owner",
+            "permission": "ALLOW",
+            "accessType": "WRITE",
+            "property": "__create__jobs"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$owner",
+            "permission": "ALLOW",
+            "property": "__get__swipeConfiguration",
+            "accessType": "READ"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$owner",
+            "permission": "ALLOW",
+            "property": "__get__swipeData",
+            "accessType": "READ"
+        }
+    ]
+}

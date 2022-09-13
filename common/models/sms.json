@@ -1,0 +1,72 @@
+{
+	"name": "SMS",
+    "base": "PersistedModel",
+    "plural" : "SMS",
+    "idInjection": false,
+    "properties": {
+        "body" : {
+            "type" : "String"
+        },
+        "installationId" : {
+            "type" : "String"
+        }
+    },
+    "acls": [
+        {
+            "principalType": "ROLE",
+            "principalId": "$everyone",
+            "permission": "DENY",
+            "property": "*",
+            "accessType": "*"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$everyone",
+            "permission": "ALLOW",
+            "property": "create",
+            "accessType": "WRITE"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$owner",
+            "permission": "ALLOW",
+            "property": "upsert",
+            "accessType": "WRITE"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$authenticated",
+            "permission": "ALLOW",
+            "property": "upsert",
+            "accessType": "WRITE"
+        },
+        {
+            "principalType": "USER",
+            "principalId": "5acb3b18146ca8f84d18a8b0",
+            "permission": "ALLOW",
+            "property": "find",
+            "accessType": "READ"
+        },
+        {
+            "principalType": "USER",
+            "principalId": "5acb3b18146ca8f84d18a8b0",
+            "permission": "ALLOW",
+            "property": "findById",
+            "accessType": "READ"
+        },
+        {
+            "principalType": "USER",
+            "principalId": "5ac5c6d80504bb01ea12191f",
+            "permission": "ALLOW",
+            "property": "find",
+            "accessType": "READ"
+        },
+        {
+            "principalType": "USER",
+            "principalId": "5ac5c6d80504bb01ea12191f",
+            "permission": "ALLOW",
+            "property": "findById",
+            "accessType": "READ"          
+        }
+    ]
+}

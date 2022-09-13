@@ -1,0 +1,302 @@
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-radio-group/paper-radio-group.html">
+<link rel="import" href="../bower_components/paper-radio-button/paper-radio-button.html">
+
+<dom-module id="survey-form">
+
+    <template>
+
+        <style include="shared-styles iron-flex iron-flex-alignment">
+            :host {
+                display: inline-block;
+            }
+
+            .fields {
+                margin-left: 16px;
+            }
+
+            .fields>* {
+                min-width: 300px;
+                max-width: 550px;
+                margin-right: 16px;
+            }
+
+            ;
+
+            paper-input {
+                display: inline-block;
+                @apply(--layout-flex);
+            }
+
+            ;
+
+            paper-checkbox {
+                display: inline-block;
+                margin-top: 16px;
+                margin-bottom: 16px;
+                @apply(--layout-flex);
+            }
+
+            ;
+
+            h3 {
+                margin-left: 16px;
+            }
+
+            iron-pages {
+                margin-bottom: 64px;
+            }
+
+            .empty-divider {
+                min-height: 16px;
+                margin-top: 8px;
+            }
+
+            .radio-wrapper {
+                margin-top: 8px;
+                margin-left: 16px;
+                min-width: 300px;
+                max-width: 550px;
+                display: inline-block;
+                @apply(--layout-flex);
+                margin-right: 16px;
+            }
+
+            paper-radio-group {
+                min-width: 300px;
+                max-width: 550px;
+                @apply(--layout-flex);
+            }
+
+            paper-radio-button {
+                min-width: 300px;
+                max-width: 550px;
+                @apply(--layout-flex);
+            }
+        </style>
+
+        <iron-pages selected="{{step}}" attr-for-selected="name">
+            <div name="initial">
+                <h3>Self and Property Details</h3>
+                <div class="fields layout  horizontal wrap">
+                    <paper-input class="field" label="Name" required="" field-id="name" meta-field-id="name" value="{{surveydata.name}}"></paper-input>
+                    <paper-input label="Mobile Number" field-id="mobileNumber" value="{{surveydata.mobileNumber}}"></paper-input>
+                    <paper-input label="Building Number" field-id="buildingNumber" value="{{surveydata.buildingNumber}}"></paper-input>
+                    <paper-input label="GIS Id" field-id="gisID" value="{{surveydata.gisID}}"></paper-input>
+                    <paper-input class="field" label="Address" field-id="address" meta-field-id="address" value="{{surveydata.remarks}}"></paper-input>
+                    <paper-input decimal label="Flood Line In Meters" field-id="floodLineInMeters" value="{{surveydata.floodLineInMeters}}"></paper-input decimal>
+                </div>
+                <div class="radio-wrapper">
+                    <label>Property Damage Type:</label>
+                    <paper-radio-group class="fields layout  vertical wrap" selected="{{surveydata.damageType}}">
+                        <paper-radio-button name="none">None</paper-radio-button>
+                        <paper-radio-button name="partial">Partial</paper-radio-button>
+                        <paper-radio-button name="full">Full</paper-radio-button>
+                    </paper-radio-group>
+                </div>
+                <div class="radio-wrapper">
+                    <label>Property Ownership</label>
+                    <paper-radio-group class="fields layout  vertical wrap" selected="{{surveydata.ownershipType}}">
+                        <paper-radio-button name="owned">Owned</paper-radio-button>
+                        <paper-radio-button name="rented">Rented</paper-radio-button>
+                    </paper-radio-group>
+                </div>
+                <div class="empty-divider">
+
+                </div>
+                <div class="layout horizontal center-center">
+                    <paper-button raised on-tap="_submitInitial">OK</paper-button>
+                </div>
+            </div>
+            <div name="owner">
+                <h3>Owner Details</h3>
+                <div class="fields layout  horizontal wrap">
+                    <paper-input label="Owner Name" field-id="ownerName" value="{{surveydata.ownerName}}"></paper-input>
+                    <paper-input label="Owner Address" field-id="ownerAddress" value="{{surveydata.ownerAddress}}"></paper-input>
+                    <paper-input label="Owner Mobile Number" field-id="ownerMobileNumber" value="{{surveydata.ownerMobileNumber}}"></paper-input>
+                </div>
+                <div class="empty-divider">
+
+                </div>
+                <div class="layout horizontal center-center">
+                    <paper-button raised on-tap="_submitOwner">OK</paper-button>
+                </div>
+            </div>
+            <div name="furniture">
+                <h3>Furniture</h3>
+                <div class="fields layout  horizontal wrap">
+                    <paper-input decimal label="Number Of Cots Required" field-id="numberOfCotsRequired" value="{{surveydata.numberOfCotsRequired}}"></paper-input decimal>
+                    <paper-input decimal label="Number Of Tables Required" field-id="numberOfTablesRequired" value="{{surveydata.numberOfTablesRequired}}"></paper-input decimal>
+                    <paper-input decimal label="Number Of Mattress Required" field-id="numberOfMattressRequired" value="{{surveydata.numberOfMattressRequired}}"></paper-input decimal>
+                    <paper-input label="Other Furniture Required" field-id="otherFurnitureRequired" value="{{surveydata.otherFurnitureRequired}}"></paper-input>
+                    <paper-checkbox label="Sofa Set Lost" field-id="sofaSetLost" value="{{surveydata.sofaSetLost}}">Sofa Set Lost</paper-checkbox>
+                </div>
+                <div class="empty-divider">
+
+                </div>
+                <div class="layout horizontal center-center">
+                    <paper-button raised on-tap="_submitFurniture">OK</paper-button>
+                </div>
+            </div>
+            <div name="kitchen">
+                <h3>Kitchen Items Lost</h3>
+                <div class="fields layout  horizontal wrap">
+                    <paper-checkbox label="Gas Stove Lost" field-id="gasStoveLost" value="{{surveydata.gasStoveLost}}">GAS Stove</paper-checkbox>
+                    <paper-checkbox label="Gas Cylinder Lost" field-id="gasCylinderLost" value="{{surveydata.gasCylinderLost}}">GAS Cylinder</paper-checkbox>
+                    <paper-checkbox label="Mixer Grinder Lost" field-id="mixerGrinderLost" value="{{surveydata.mixerGrinderLost}}">Mixer Grinder</paper-checkbox>
+                </div>
+                <div class="fields layout  horizontal wrap">
+                    <paper-input label="Other Kitchen Utensils Lost" field-id="otherKitchenUtensilLost" value="{{surveydata.otherKitchenUtensilLost}}"></paper-input>
+                </div>
+                <div class="empty-divider">
+
+                </div>
+                <div class="layout horizontal center-center">
+                    <paper-button raised on-tap="_submitKitchen">OK</paper-button>
+                </div>
+            </div>
+            <div name="repair">
+                <h3>Repair Work Required</h3>
+                <div class="fields layout  horizontal wrap">
+                    <paper-checkbox label="Building Repar Required" field-id="buildingReparRequired" value="{{surveydata.buildingReparRequired}}">Building</paper-checkbox>
+                    <paper-checkbox label="Compound Wall Repar Required" field-id="compoundWallReparRequired" value="{{surveydata.compoundWallReparRequired}}">Compound Wall</paper-checkbox>
+                    <paper-checkbox label="Carpentry Work Required" field-id="carpentryWorkRequired" value="{{surveydata.carpentryWorkRequired}}">Carpentry Work</paper-checkbox>
+                    <paper-checkbox label="Electric Work Required" field-id="electricWorkRequired" value="{{surveydata.electricWorkRequired}}">Electric Work</paper-checkbox>
+                    <paper-checkbox label="Plumbing Work Required" field-id="plumbingWorkRequired" value="{{surveydata.plumbingWorkRequired}}">Plumbing Work</paper-checkbox>
+                    <paper-checkbox label="Well Repair Required" field-id="wellRepairRequired" value="{{surveydata.wellRepairRequired}}">Well Repair</paper-checkbox>
+                    <paper-checkbox field-id="tvRepairRequired" value="{{surveydata.tvRepairRequired}}">TV</paper-checkbox>
+                    <paper-checkbox label="Fridge Repair Required" field-id="fridgeRepairRequired" value="{{surveydata.fridgeRepairRequired}}">Fridge / Refrigerator</paper-checkbox>
+                    <paper-checkbox label="Washing Machine Repair Required" field-id="washingMachineRepairRequired" value="{{surveydata.washingMachineRepairRequired}}">Washing Machine</paper-checkbox>
+                    <paper-checkbox label="Motor Pump Repair Required" field-id="motorPumpRepairRequired" value="{{surveydata.motorPumpRepairRequired}}">Motor / Pump</paper-checkbox>
+                    <paper-checkbox label="Computer Laptop Repair Required" field-id="computerLaptopRepairRequired" value="{{surveydata.computerLaptopRepairRequired}}">Computer Laptop</paper-checkbox>
+
+                </div>
+                <div class="fields layout  horizontal wrap">
+
+                    <paper-input decimal label="Number Of Fans Required" field-id="numberOfFansRequired" value="{{surveydata.numberOfFansRequired}}"></paper-input decimal>
+                    <paper-input decimal label="Number Of Lights Required" field-id="numberOfLightsRequired" value="{{surveydata.numberOfLightsRequired}}"></paper-input decimal>
+                    <paper-input label="Other Repair Required" field-id="otherRepairRequired" value="{{surveydata.otherRepairRequired}}"></paper-input>
+                </div>
+                <div class="empty-divider"></div>
+                <div class="layout horizontal center-center">
+                    <paper-button raised on-tap="_submitRepair">OK</paper-button>
+                </div>
+            </div>
+            <div name="documents">
+                <h3>Documents Lost</h3>
+                <div class="fields layout  horizontal wrap">
+                    <paper-checkbox label="Land Record Lost" field-id="landRecordLost" value="{{surveydata.landRecordLost}}">Land Record</paper-checkbox>
+                    <paper-checkbox label="Aadhar Card Lost" field-id="aadharCardLost" value="{{surveydata.aadharCardLost}}">Aadhar Card</paper-checkbox>
+                    <paper-checkbox label="PAN Card Lost" field-id="PANCardLost" value="{{surveydata.PANCardLost}}">PAN Card</paper-checkbox>
+                    <paper-checkbox label="Ration Card Lost" field-id="rationCardLost" value="{{surveydata.rationCardLost}}">Ration Card</paper-checkbox>
+                    <paper-checkbox label="Voter Id Lost" field-id="voterIdLost" value="{{surveydata.voterIdLost}}">Voter ID</paper-checkbox>
+                    <paper-checkbox label="Driving License Lost" field-id="drivingLicenseLost" value="{{surveydata.drivingLicenseLost}}">Driving Licence ID</paper-checkbox>
+                    <paper-checkbox label="Educational Certificates Lost" field-id="educationalCertificatesLost" value="{{surveydata.educationalCertificatesLost}}">Education Certificates</paper-checkbox>
+                    <paper-checkbox label="Passport Lost" field-id="passportLost" value="{{surveydata.passportLost}}">Passport</paper-checkbox>
+                    <paper-checkbox label="Birth Certificate" field-id="birthCertificate" value="{{surveydata.birthCertificate}}">Birth Certificate</paper-checkbox>
+                    <paper-checkbox label="Death Certificate Lost" field-id="deathCertificateLost" value="{{surveydata.deathCertificateLost}}">Deatch Certificate</paper-checkbox>
+                    <paper-checkbox label="Marriage Certificate Lost" field-id="marriageCertificateLost" value="{{surveydata.marriageCertificateLost}}">Marriage Certificate</paper-checkbox>
+                    <paper-checkbox label="Insurance Policy Lost" field-id="insurancePolicyLost" value="{{surveydata.insurancePolicyLost}}">Insurance Policy</paper-checkbox>
+                    <paper-input label="Other Documents Lost" field-id="otherDocumentsLost" value="{{surveydata.otherDocumentsLost}}"></paper-input>
+                </div>
+                <div class="empty-divider">
+
+                </div>
+                <div class="layout horizontal center-center">
+                    <paper-button raised on-tap="_submitDocuments">OK</paper-button>
+                </div>
+            </div>
+
+            <div name="others">
+                <h3>Other Details Lost</h3>
+                <div class="fields layout  horizontal wrap">
+                    <paper-checkbox label="Student Cycle Lost" field-id="studentCycleLost" value="{{surveydata.studentCycleLost}}">Student Cycle Lost</paper-checkbox>
+                    <paper-checkbox label="Agriculture Loan Availed" field-id="agricultureLoanAvailed" value="{{surveydata.agricultureLoanAvailed}}">Agriculture Loan Availed</paper-checkbox>
+                    <paper-checkbox label="Anyone Missing In Family" field-id="anyoneMissingInFamily" value="{{surveydata.anyoneMissingInFamily}}">Person Missing in Family</paper-checkbox>
+                    <paper-checkbox label="Cow Missing" field-id="cowMissing" value="{{surveydata.cowMissing}}">Cow Lost</paper-checkbox>
+                    <paper-checkbox label="Goat Missing" field-id="goatMissing" value="{{surveydata.goatMissing}}">Goats Lost</paper-checkbox>
+                </div>
+                <div class="fields layout  horizontal wrap">
+                    <paper-input label="Loss Of Agriculture" field-id="lossOfAgriculture" value="{{surveydata.lossOfAgriculture}}"></paper-input>
+                </div>
+                <div class="empty-divider">
+
+                </div>
+                <div class="layout horizontal center-center">
+                    <paper-button raised on-tap="_submitOthers">OK</paper-button>
+                </div>
+            </div>
+            <div name="final">
+                <h3>Thanks for submitting</h3>
+            </div>
+        </iron-pages>
+        <div id="fields" class="fields layout  horizontal wrap">
+        </div>
+
+        <iron-ajax id="xhr" method="POST" content-type="application/json" handle-as="json" on-response="handleResponse" ></iron-ajax>
+
+    </template>
+
+    <script>
+        Polymer({
+            is: 'survey-form',
+            properties: {
+                step: {
+                    type: "String",
+                    value: "initial"
+                },
+                surveydata: {
+                    type: Object,
+                    value: function () {
+                        return {};
+                    }
+                }
+            },
+            attached: function () {
+
+            },
+            _submitInitial: function () {
+                this.set("step", "owner");
+                Polymer.AppLayout.scroll({ top: 0, behavior: 'silent' });
+            },
+            _submitOwner: function () {
+                this.set("step", "furniture");
+                Polymer.AppLayout.scroll({ top: 0, behavior: 'silent' });
+            },
+            _submitFurniture: function () {
+                this.set("step", "kitchen");
+                Polymer.AppLayout.scroll({ top: 0, behavior: 'silent' });
+            },
+            _submitKitchen: function () {
+                this.set("step", "repair");
+                Polymer.AppLayout.scroll({ top: 0, behavior: 'silent' });
+            },
+            _submitRepair: function () {
+                this.set("step", "documents");
+                Polymer.AppLayout.scroll({ top: 0, behavior: 'silent' });
+            },
+            _submitDocuments: function () {
+                this.set("step", "others");
+                Polymer.AppLayout.scroll({ top: 0, behavior: 'silent' });
+            },
+            _submitOthers: function () {
+                this.set("step", "final");
+                Polymer.AppLayout.scroll({ top: 0, behavior: 'silent' });
+                this._submitData();
+            },
+            _submitData: function () {
+                console.log('survey data ', this.surveydata);
+                this.$.xhr.url = "/api/surveydata";
+                this.$.xhr.body = this.surveydata;
+                this.$.xhr.generateRequest();
+            },
+            handleResponse : function(e) {
+                console.log('handleResponse ', e.detail.response);
+            }
+        });
+     </script>
+
+</dom-module>

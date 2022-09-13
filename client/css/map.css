@@ -1,0 +1,198 @@
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* The location pointed to by the popup tip. */
+      .popup-tip-anchor {
+        height: 0;
+        position: absolute;
+        /* The max width of the info window. */
+        width: 200px;
+      }
+      /* The bubble is anchored above the tip. */
+      .popup-bubble-anchor {
+        position: absolute;
+        width: 100%;
+        bottom: /* TIP_HEIGHT= */ 8px;
+        left: 0;
+      }
+      /* Draw the tip. */
+      .popup-bubble-anchor::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* Center the tip horizontally. */
+        transform: translate(-50%, 0);
+        /* The tip is a https://css-tricks.com/snippets/css/css-triangle/ */
+        width: 0;
+        height: 0;
+        /* The tip is 8px high, and 12px wide. */
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: /* TIP_HEIGHT= */ 8px solid white;
+      }
+      /* The popup bubble itself. */
+      .popup-bubble-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -100%);
+        /* Style the info window. */
+        background-color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-family: sans-serif;
+        overflow-y: auto;
+        max-height: 80px;
+        box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.5);
+      }
+      .context_menu{
+        background-color:rgb(255, 174, 0);
+        border:1px solid gray;
+        height: 20px;
+        width: 50px;
+        padding: 10px;
+        font-size: 12px;
+        font-weight: bold;
+        display: inline;
+        float: none;
+      }
+      .context_menu_item{
+        padding:3px 6px;
+      }
+      .context_menu_item:hover{
+        background-color:#CCCCCC;
+      }
+      .context_menu_separator{
+        background-color:gray;
+        height:1px;
+        margin:0;
+        padding:0;
+      }
+      #clearDirectionsItem, #getDirectionsItem{
+        display:none;
+      }
+      /*	end styles for the ContextMenu	*/
+      #map_container{
+        height:100%;
+      }
+
+      #inputs{
+        background-color:rgba(173, 216, 230, 0);
+        height: 6%;
+        padding-left: 0px;
+        
+      }
+      .button, .button1 {
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: rgb(228, 112, 3);
+        background-color: #ffe9a0;
+        border: none;
+        margin: 4px 4px;
+        width: 50px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      }
+      
+      .button:hover {background-color: #ffe9a0}
+      
+      .button:active {
+        background-color: rgb(255, 186, 83);
+        transform: translateY(2px);
+      }
+
+      .button1 {
+        border-radius: 50%;
+        font-size: 32px;
+        padding: 5px;
+      }
+      .button1:active {
+        transform: translateY(3px);
+      }
+
+      .button {
+        width: 75px;
+        font-size: 16px;
+        padding: 10px 8px;
+      }
+
+      .imgbtn {
+        cursor: pointer;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      }      
+      .imgbtn:active {
+        transform: translateY(3px);
+      }
+      .imgdiv {
+        display: block;
+        margin-top: 10px;
+        display: table;
+        height: 50px;
+      } 
+
+      #nameinput {
+        margin-top: 10px;
+        height: 50px;
+        pointer-events: all;
+      } 
+
+      .child1 {
+        display: table-cell;
+        vertical-align: middle;
+        padding-right: 10px;
+        height: 50px;
+        pointer-events: all;
+      }
+      .child2 {
+        display: none;
+        vertical-align: middle;
+        padding-right: 10px;
+        padding-left: 10px;
+        height: 50px;
+      }
+      .textlabel {
+        background-color: lightgrey;
+        color:black;
+        padding: 3px 3px;
+        font-weight: bold;
+      }
+
+      .message {
+        padding: 7px 7px;
+        font-size: 14px;
+        font-weight: bold;
+        width: 350px;
+      }
+
+      #nameholder {
+        background-color: lightgrey;
+        color:black;
+        padding: 7px 7px;
+        font-weight: bold;
+      }
+      input[type=text] {
+        width: 120px;
+        padding: 10px 5px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+      
+      body.inputs.controls.imgdiv.hidehelp div {
+        display: none;
+      }
+
+      body.showhelp div {
+        display: table-cell;
+      }

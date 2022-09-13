@@ -1,0 +1,43 @@
+{
+	"name": "Tower",
+	"base": "PersistedModel",
+	"description": "Stores tower location data",
+	"properties": {
+        "radio" : {
+            "type" : "String"
+        },
+        "mcc" : {
+            "type" : "Number"
+        },
+        "mnc" : {
+            "type" : "Number"
+        },
+        "lac" : {
+            "type" : "Number"
+        },
+        "cid" : {
+            "type" : "Number"
+        },
+        "psc" : {
+            "type" : "Number"
+        },
+	    "latitude" : {
+            "type" : "Number"
+        },
+        "longitude" : {
+            "type" : "Number"
+        },
+        "accuracy" : {
+            "type" : "Number"
+        },
+		"time" : {
+            "type" : "Number"
+		},
+		"message" : {
+            "type" : "String"
+        },
+		"address" : {
+			"type" : "String"
+        }
+	}
+}

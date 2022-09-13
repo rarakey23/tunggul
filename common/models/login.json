@@ -1,0 +1,20 @@
+{
+	"name": "Login",
+    "base": "Model",
+    "idInjection": false,
+    "plural" : "login",
+	"description": "To login",
+	"properties": {
+        "user" : {
+            "type" : "String",
+            "id" : true,
+            "required" : true
+        },
+        "password" : {
+            "type" : "String"
+        },
+        "deviceToken" : {
+            "type" : "String"
+        }
+    }
+}

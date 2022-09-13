@@ -1,0 +1,50 @@
+{
+	"name": "SwipeData",
+	"base": "PersistedModel",
+	"description": "Stores swipe data",
+	"properties": {
+		"yyyymmdd" : {
+            "type" : "String",
+            "required" : true
+        },
+        "swipeInTime" : {
+            "type" : "Number",
+            "default" : 0
+        },
+        "swipeOutTime" : {
+            "type" : "Number",
+            "default" : 0
+        },
+        "reachedOfficeTime" : {
+            "type" : "Number",
+            "default" : 0
+        },
+        "inTime" : {
+            "type" : "Number",
+            "description" : "if inTime is given swipeInTime, reachedOffice is not considered, otherwise they are considered with additional tolerance time"
+        },
+        "reachedOffice" : {
+            "type" : "Boolean",
+            "default" : false
+        },
+        "leavingTime" : {
+            "type" : "Number",
+            "default" : 0
+        },
+        "userId" : {
+            "type" : "String",
+            "required" : true
+        },
+        "name" : {
+            "type" : "String"
+        }
+    },
+    "relations": {
+        "user": {
+            "type": "belongsTo",
+            "model": "AppUser",
+            "primaryKey" : "id",
+            "foreignKey" : "userId"
+        }
+    }
+}

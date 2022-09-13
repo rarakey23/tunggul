@@ -1,0 +1,28 @@
+{
+	"name": "AccessPoint",
+	"base": "PersistedModel",
+	"description": "Stores Access Point data",
+	"properties": {
+        "ssid" : {
+            "type" : "String"
+        },
+        "bssid" : {
+            "type" : "String"
+        },
+ 	    "latitude" : {
+            "type" : "Number"
+        },
+        "longitude" : {
+            "type" : "Number"
+        },
+        "accuracy" : {
+            "type" : "Number"
+        },
+		"time" : {
+            "type" : "Number"
+		},
+		"message" : {
+            "type" : "String"
+        }
+	}
+}

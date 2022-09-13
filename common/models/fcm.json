@@ -1,0 +1,35 @@
+{
+	"name": "FCM",
+    "base": "PersistedModel",
+    "plural":"FCM",
+    "idInjection": false,
+	"description": "To Test FCM",
+	"properties": {
+        "title" : {
+            "type" : "String",
+            "default" : ""
+        },
+        "body" : {
+            "type" : "String",
+            "default" : ""
+        },
+        "type" : {
+            "type" : "String",
+            "description" : "like scheduleJob"
+        },
+        "data" : {
+            "type" : "object",
+            "description" : ""
+        },
+        "highPriority" : {
+            "type" : "Boolean"
+        },
+        "userName" : {
+            "type" : "String"
+        },
+        "userId" : {
+            "type" : "String"
+        }
+    },
+    "hidden" : ["userId"]
+}

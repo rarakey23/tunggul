@@ -1,0 +1,268 @@
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<link rel="import" href="app-icons.html">
+
+<link rel="import" href="../bower_components/app-route/app-location.html">
+<link rel="import" href="../bower_components/app-route/app-route.html">
+
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+
+<link rel="import" href="../bower_components/paper-fab/paper-fab.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-styles/shadow.html">
+
+<link rel="import" href="../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
+
+<link rel="import" href="survey-form.html">
+
+<dom-module id="survey-app">
+
+  <template>
+
+    <style>
+      :host {
+        --app-primary-color: #404040;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+
+      app-drawer {
+        --app-drawer-content-container: {
+          background-color: var(--app-primary-color);
+          overflow-x: hidden;
+        }
+        ;
+      }
+
+      app-drawer app-header {
+        background-color: var(--app-primary-color);
+      }
+
+      .nav-menu {
+        background-color: var(--app-primary-color);
+        color: #fff;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-size: inherit;
+      }
+
+      .nav-menu>a {
+        display: block;
+        padding: 12px 16px;
+        font-size: 16px;
+        font-weight: 300;
+      }
+
+      .nav-menu>a.iron-selected {
+        background-color: #888;
+      }
+
+      .main-header {
+        border-bottom: 1px solid #ddd;
+        background-color: #fff;
+        color: #444;
+      }
+
+      .title-toolbar {
+        box-sizing: border-box;
+      }
+
+      .nav-title-toolbar {
+        color: #fff;
+        width: 100vw;
+      }
+
+      .main-title-toolbar {
+        width: 100%;
+      }
+
+      .title {
+        font-size: 20px;
+        font-weight: 200;
+        padding-bottom: 0px;
+      }
+
+      survey-form {
+        min-height: 100vh;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      article-headline {
+        @apply --shadow-transition;
+        @apply --shadow-elevation-2dp;
+        cursor: pointer;
+      }
+
+      article-detail {
+        max-width: 736px;
+        margin: 64px auto;
+        background-color: #fff;
+        @apply --shadow-elevation-2dp;
+      }
+
+      [hidden] {
+        display: none;
+      }
+
+      @media (max-width: 580px) {
+
+        /* make title smaller to fit on screen */
+        .title {
+          font-size: 20px;
+          padding-bottom: 0px;
+        }
+
+      }
+
+      /* narrow layout */
+
+      @media (max-width: 808px) {
+
+        article-detail {
+          max-width: none;
+          margin: 0;
+        }
+
+      }
+    </style>
+
+    <!-- setup routes -->
+    <app-location route="{{route}}"></app-location>
+
+    <app-drawer-layout drawer-width="288px" responsive-width="1280px" narrow="{{narrow}}">
+
+      <!-- nav panel -->
+      <app-drawer id="drawer" slot="drawer">
+        <app-header-layout has-scrolling-region>
+
+          <app-header fixed slot="header">
+
+            <!-- top toolbar -->
+            <app-toolbar></app-toolbar>
+
+            <app-toolbar class="title-toolbar nav-title-toolbar">
+              <div class="title">Kerala Relief Survey</div>
+            </app-toolbar>
+
+          </app-header>
+
+          <!-- nav menu -->
+          <iron-selector class="nav-menu" selected="[[categoryData.category]]" attr-for-selected="name" on-iron-activate="_drawerSelected">
+            <a name="home" href="/">Home</a>
+            <a name="logout" href="/logout">Logout</a>
+          </iron-selector>
+
+        </app-header-layout>
+      </app-drawer>
+
+      <!-- main panel -->
+      <app-header-layout>
+
+        <app-header fixed effects="waterfall" class="main-header" slot="header">
+          <!-- top toolbar -->
+          <app-toolbar>
+            <!-- menu button -->
+            <paper-icon-button drawer-toggle icon="app:menu"></paper-icon-button>
+            <div class="title">Kerala Relief Survey</div>
+          </app-toolbar>
+
+        </app-header>
+
+        <survey-form name="home"></survey-form>
+
+      </app-header-layout>
+
+    </app-drawer-layout>
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'survey-app',
+
+      properties: {
+
+        /**
+         * Articles data.
+         */
+        articles: Object,
+
+        route: Object,
+
+        categoryData: Object,
+
+        pageData: Object,
+
+        idData: Object,
+
+        _scrollPositionMap: {
+          type: Object,
+          value: function () {
+            return {};
+          }
+        }
+
+      },
+
+      observers: [],
+
+      attached: function () {
+      },
+
+      _equal: function (value1, value2) {
+        return value1 === value2;
+      },
+
+      _drawerSelected: function () {
+        if (!this.$.drawer.persistent)
+          this.$.drawer.close();
+      },
+
+      _shouldHideMenuButton: function (narrow) {
+        return false;
+      },
+      /**
+       * Preserves the document scroll position, so
+       * it can be restored when returning to a page.
+       */
+      _subsubrouteChanged: function (subroute, oldSubroute) {
+        var map = this._scrollPositionMap;
+        if (oldSubroute != null && oldSubroute.prefix != null) {
+          // Don't reset the scroll position in the detail page.
+          if (oldSubroute.prefix.indexOf('detail') == -1) {
+            map[oldSubroute.prefix] = window.pageYOffset;
+          }
+        }
+        if (map[subroute.prefix] != null) {
+          Polymer.AppLayout.scroll({ top: map[subroute.prefix], behavior: 'silent' });
+        } else if (this.isAttached) {
+          Polymer.AppLayout.scroll({ top: 0, behavior: 'silent' });
+        }
+      }
+
+    });
+  </script>
+
+</dom-module>

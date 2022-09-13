@@ -1,0 +1,29 @@
+{
+	"name": "Location",
+	"base": "PersistedModel",
+	"description": "Stores location data",
+	"properties": {
+		"name" : {
+            "type" : "String"
+        },
+        "latitude" : {
+            "type" : "Number"
+        },
+        "longitude" : {
+            "type" : "Number"
+        },
+		"locationTime" : {
+            "type" : "Number"
+		},
+		"accuracy" : {
+            "type" : "Number",
+            "default" : 0
+        },
+		"userId" : {
+			"type" : "String"
+		},
+		"source" : {
+			"type" : "String"
+		}
+	}
+}

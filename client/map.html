@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/css/map.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body onLoad='fetch(); showLocation(); setMe();' onhashchange="setMe();">
+    <div id="map"></div>
+    <div id="content"></div>
+    <div id='inputs'>
+      <div id="controlbtn" style="pointer-events: all;">
+        <input type="button" value="+" class="button1" onClick="if(this.value==='+') {this.value='-'; document.getElementById('controls').style.display='block';toggleHelp(0);} else {this.value='+'; document.getElementById('controls').style.display='none';};">
+        &nbsp;&nbsp;<span id="nameholder">User: UNKNOWN</span>
+      </div>
+      <div id="controls" style="display:none;">
+        <div id='msg'  class="message">&nbsp;</div>
+        <div id="name">
+            <div class="imgdiv">
+              <div class="child1"><input type="image" class="imgbtn" src="/images/user.png" height="50px" alt='Set User' onClick="document.getElementById('name').style.display='none'; document.getElementById('nameinput').style.display='block'; if(me!==UNKNOWN) document.getElementById('username').value=me; document.getElementById('username').focus();"></div>
+              <div class="child2"><div class="textlabel">Sets Username</div></div>
+            </div>  
+        </div>
+        <div id="nameinput" style="display:none;">
+          <input id='username' type='text' placeholder='Enter Username' onKeyUp="keypressed(this, event)">&nbsp;&nbsp;
+          <input type='button' value='OK' class="button" onClick="setMe(document.getElementById('username').value) && function() {document.getElementById('nameinput').style.display='none'; document.getElementById('name').style.display='block';}()">&nbsp;&nbsp;
+          <input type='button' value='Cancel' class="button" onClick="document.getElementById('nameinput').style.display='none'; document.getElementById('name').style.display='block';">
+        </div>
+        <div class="imgdiv">
+          <div class="child1"><input id="locToGPS" type="image" class="imgbtn" src="/images/locToGPSgrey.jpg" height="50px" alt='Set my location to GPS' onClick='centerMyLocation(1) && setMapCenterAsMyLocation() && showMessage("msg", 1, "white", "darkgreen");'></div>
+          <div class="child2"><div class="textlabel">Sets User Location to GPS Position (Blue Dot)</div></div>
+        </div>
+        <div class="imgdiv">
+          <div class="child1"><input id="locToCenter" type="image" class="imgbtn" src="/images/locToCentergrey.jpg" height="50px" alt='Set my location to Map Center' onClick='setMapCenterAsMyLocation() && showMessage("msg", 2, "white", "darkgreen");'></div> 
+          <div class="child2"><div class="textlabel">Sets User Location to Map Center (Red Cross-Hairs)</div></div>
+        </div>
+        <div class="imgdiv">
+          <div class="child1"><input id="goToGPS" type="image" class="imgbtn" src="/images/goToGPSgrey.jpg"     height="50px" alt='Go to my GPS Position' onClick='centerMyLocation(1) && showMessage("msg", 3, "white", "darkgreen");'></div> 
+          <div class="child2"><div class="textlabel">Centers map on GPS Position (Blue Dot)</div></div>
+        </div>  
+        <div class="imgdiv">
+          <div class="child1"><input id="help" type="image" class="imgbtn" src="/images/help.png"  height="50px" alt='Help' onClick="toggleHelp();"></div> 
+          <div class="child2"><div class="textlabel">Centers map on GPS Position (Blue Dot)</div></div>
+        </div>  
+      </div>
+    </div>
+     
+     
+
+    <script src="/js/map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDufSgXwPtrxiwSBQVTsyCdjRoqzWlulp0&callback=initMap"></script>
+    <script src="/js/popup.js"></script>
+    <script src="/js/ContextMenu.js"></script>
+    <script src="/js/menu.js"></script>
+  </body>
+</html>

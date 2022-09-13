@@ -1,0 +1,74 @@
+{
+    "name": "AppUser",
+    "plural": "Users",
+    "base": "BaseUser",
+    "idInjection": false,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "phone": {
+            "type": "String"
+        },
+        "team": {
+            "type": "String"
+        },
+        "deviceToken" : {
+            "type" : "String"
+        },
+	"online" : {
+		"type" : "Boolean"
+	}
+    },
+    "relations": {
+        "contacts": {
+            "type": "hasMany",
+            "model": "Contact",
+            "foreignKey": "ownerUserId"
+        }
+    },
+    "acls": [
+        {
+            "principalType": "ROLE",
+            "principalId": "$everyone",
+            "permission": "DENY",
+            "property": "*",
+            "accessType": "*"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$owner",
+            "permission": "ALLOW",
+            "accessType": "READ",
+            "property": "data"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$owner",
+            "permission": "ALLOW",
+            "accessType": "READ",
+            "property": "__get__contacts"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$owner",
+            "permission": "ALLOW",
+            "accessType": "WRITE",
+            "property": "__create__contacts"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$owner",
+            "permission": "ALLOW",
+            "accessType": "WRITE",
+            "property": "__delete__contacts"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "admin",
+            "permission": "ALLOW",
+            "property": "*",
+            "accessType": "READ"
+        }
+    ]
+}

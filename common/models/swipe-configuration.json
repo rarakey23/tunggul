@@ -1,0 +1,45 @@
+{
+	"name": "SwipeConfiguration",
+	"base": "PersistedModel",
+	"description": "Stores swipe configuration",
+	"properties": {
+		"name" : {
+            "type" : "String"
+        },
+        "latitude" : {
+            "type" : "Number"
+        },
+        "longitude" : {
+            "type" : "Number"
+        },
+        "distnaceAccuracy" : {
+            "type" : "Number"
+        },
+        "nearDistance" : {
+            "type" : "Number"
+        },
+        "periodInterval" : {
+            "type" : "Number"
+        },
+        "clockAdjustment" : {
+            "type" : "Number"
+        },
+        "locationAdjustment" : {
+            "type" : "Number"
+        },
+        "userId" : {
+            "type" : "String"
+        },
+        "maxServiceDuration" : {
+            "type" : "Number"
+        }
+    },
+    "relations": {
+        "user": {
+            "type": "belongsTo",
+            "model": "AppUser",
+            "primaryKey" : "id",
+            "foreignKey" : "userId"
+        }
+    }
+}

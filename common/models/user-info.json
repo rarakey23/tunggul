@@ -1,0 +1,56 @@
+{
+	"name": "UserInfo",
+    "base": "PersistedModel",
+    "idInjection": false,
+    "plural" : "UserInfo",
+	"description": "System maintained inormation about user",
+	"properties": {
+        "name" : {
+            "type" : "String"
+        },
+        "latitude" : {
+            "type" : "Number"
+        },
+        "longitude" : {
+            "type" : "Number"
+        },
+        "lastLocationTime" : {
+            "type" : "Date"
+        },
+        "lastStatusRequestTime" : {
+            "type" : "Number"
+        },
+        "accuracy" : {
+            "type" : "Number",
+            "default" : 0
+        },
+        "status" : {
+            "type" : "String",
+            "default" : ""
+        },
+        "image" : {
+            "type" : "String"
+        },
+        "lastViewedAt" : {
+            "type" : "Number"
+        },
+        "lastUpdatedAt" : {
+            "type" : "Number"
+        },
+        "stableLocation" : {
+            "type" : "Boolean",
+            "default" : true
+        },
+        "stableLocationExpiryTime" : {
+            "type" : "Number",
+            "default" : 0
+        },
+        "nextJobExecutionTime" : {
+            "type" : "Number",
+            "default" : 0
+        },
+        "deviceToken" : {
+            "type" : "String"
+        }
+    }
+}

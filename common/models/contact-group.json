@@ -1,0 +1,25 @@
+{
+    "name": "ContactGroup",
+    "idInjection": false,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "ownerUserId" : {
+            "type" : "String",
+            "required" : true
+        },
+        "name" : {
+            "type" : "String",
+            "required" : true
+        },
+        "contactUserIds" : {
+            "type" : ["String"]
+        }
+    },
+    "relations": {
+    },
+    "acls" : [
+       
+    ]
+}

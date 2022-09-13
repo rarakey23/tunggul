@@ -1,0 +1,30 @@
+{
+    "name": "Contact",
+    "plural": "contacts",
+    "idInjection": false,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "ownerUserId" : {
+            "type" : "String"
+        },
+        "contactUserId" : {
+            "type" : "String"
+        },
+        "name" : {
+            "type" : "String"
+        }
+    },
+    "relations": {
+        "information": {
+            "type": "belongsTo",
+            "model": "UserInfo",
+            "primaryKey" : "id",
+            "foreignKey" : "contactUserId"
+        }
+    },
+    "acls" : [
+       
+    ]
+}

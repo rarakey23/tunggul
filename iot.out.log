@@ -1,0 +1,28 @@
+[[37m2018-03-13T18:57:48.563Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36mEV_CACHE Marking as Cacheable model: ModelDefinition[39m[33m (cache-mixin, system)[39m
+[[37m2018-03-13T18:57:48.584Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36mEV_CACHE Marking as Cacheable model: PersonalizationRule[39m[33m (cache-mixin, system)[39m
+[[37m2018-03-13T18:57:48.641Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36mEV_CACHE Marking as Cacheable model: DataACL[39m[33m (cache-mixin, system)[39m
+[[37m2018-03-13T18:57:48.677Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36mEV_CACHE Marking as Cacheable model: RefCodeBase[39m[33m (cache-mixin, system)[39m
+[[37m2018-03-13T18:57:48.718Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36mEV_CACHE Marking as Cacheable model: State[39m[33m (cache-mixin, system)[39m
+[[37m2018-03-13T18:57:48.721Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36mEV_CACHE Marking as Cacheable model: DecisionGraph[39m[33m (cache-mixin, system)[39m
+[[37m2018-03-13T18:57:48.724Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36mEV_CACHE Marking as Cacheable model: DecisionService[39m[33m (cache-mixin, system)[39m
+[[37m2018-03-13T18:57:48.732Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36mEV_CACHE Marking as Cacheable model: ModelRule[39m[33m (cache-mixin, system)[39m
+[[37m2018-03-13T18:57:48.755Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36mEV_CACHE Marking as Cacheable model: BaseACL[39m[33m (cache-mixin, system)[39m
+[[37m2018-03-13T18:57:49.124Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36minitializing js-feel[39m[33m (jsfeel-init)[39m
+[[37m2018-03-13T18:57:49.347Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36m{ msg: '\n\nWelcome to Node-RED\n===================\n' }[39m[33m (node-red, system)[39m
+[[37m2018-03-13T18:57:49.348Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36m{ msg: 'Node-RED version: v0.16.2' }[39m[33m (node-red, system)[39m
+[[37m2018-03-13T18:57:49.348Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36m{ msg: 'Node.js  version: v8.10.0' }[39m[33m (node-red, system)[39m
+[[37m2018-03-13T18:57:49.349Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36m{ msg: 'Linux 4.4.0-1049-aws x64 LE' }[39m[33m (node-red, system)[39m
+[[37m2018-03-13T18:57:49.568Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36m{ msg: 'Loading palette nodes' }[39m[33m (node-red, system)[39m
+[[37m2018-03-13T18:57:50.000Z[39m] [35m WARN[39m: oe-logger on ip-172-31-24-89: [36m{ msg: '------------------------------------------------------' }[39m[33m (node-red, system)[39m
+[[37m2018-03-13T18:57:50.000Z[39m] [35m WARN[39m: oe-logger on ip-172-31-24-89: [36m{ msg: '[rpi-gpio] Info : Ignoring Raspberry Pi specific node' }[39m[33m (node-red, system)[39m
+[[37m2018-03-13T18:57:50.000Z[39m] [35m WARN[39m: oe-logger on ip-172-31-24-89: [36m{ msg: '------------------------------------------------------' }[39m[33m (node-red, system)[39m
+[[37m2018-03-13T18:57:50.003Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36m{ msg: 'Starting flows' }[39m[33m (node-red, system)[39m
+[[37m2018-03-13T18:57:50.004Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36m{ msg: 'Started flows' }[39m[33m (node-red, system)[39m
+ *** NODE-RED : RELOADING FLOWS *** 
+[[37m2018-03-13T18:57:50.012Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36m{ msg: 'Stopping flows' }[39m[33m (node-red, system)[39m
+[[37m2018-03-13T18:57:50.013Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36m{ msg: 'Stopped flows' }[39m[33m (node-red, system)[39m
+[[37m2018-03-13T18:57:50.013Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36m{ msg: 'Starting flows' }[39m[33m (node-red, system)[39m
+[[37m2018-03-13T18:57:50.017Z[39m] [36m INFO[39m: oe-logger on ip-172-31-24-89: [36m{ msg: 'Started flows' }[39m[33m (node-red, system)[39m
+config  local /auth/local /auth/local/callback
+Browse your REST API at http://0.0.0.0:3000/explorer
+Web server listening at: http://0.0.0.0:3000/

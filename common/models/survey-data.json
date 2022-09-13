@@ -1,0 +1,180 @@
+{
+    "name": "SurveyData",
+    "plural" : "SurveyData",
+    "base": "PersistedModel",
+    "idInjection": false,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+       "id" : {
+            "type" : "String",
+            "id" : true
+       },
+       "name" : {
+           "type" : "String"
+       },
+       "mobileNumber" : {
+            "type" : "String"
+       },
+       "buildingNumber" : {
+            "type" : "String"
+       },
+       "gisID" : {
+            "type" : "String"
+       },
+       "ownershipType" : {
+            "type" : "String",
+            "in" : ["owned", "rented"]
+       },
+       "ownerName" : {
+            "type" : "String"
+       },
+       "ownerAddress" : {
+             "type" : "String"
+       },
+       "ownerMobileNumber" : {
+            "type" : "String"
+       },
+       "damageType" : {
+            "type" : "String",
+            "in" : ["none", "partial", "full"]
+       },
+       "buildingReparRequired" : {
+            "type" : "Boolean"
+       },
+       "compoundWallReparRequired" : {
+            "type" : "Boolean"
+       },
+       "carpentryWorkRequired" : {
+             "type" : "Boolean"
+       },
+       "electricWorkRequired" : {
+            "type" : "Boolean"
+       },
+       "plumbingWorkRequired" : {
+            "type" : "Boolean"
+       },
+       "wellRepairRequired" : {
+            "type" : "Boolean"
+       },
+       "numberOfFansRequired" : {
+             "type" : "Number"
+       },
+       "numberOfLightsRequired" : {
+             "type" : "Number"
+       },
+       "tvRepairRequired" : {
+            "type" : "Boolean"
+       },
+       "fridgeRepairRequired" : {
+            "type" : "Boolean"
+       },
+       "washingMachineRepairRequired" : {
+            "type" : "Boolean"
+       },
+       "motorPumpRepairRequired" : {
+            "type" : "Boolean"
+       },
+       "computerLaptopRepairRequired" : {
+            "type" : "Boolean"
+       },
+       "otherRepairRequired" : {
+            "type" : "String"
+       },
+       "numberOfCotsRequired" :{
+            "type" : "Number"
+       },
+       "numberOfTablesRequired" :{
+            "type" : "Number"
+       },
+       "numberOfMattressRequired" :{
+            "type" : "Number"
+       },
+       "otherFurnitureRequired" : {
+            "type" : "String"
+       },
+       "sofaSetLost" : {
+            "type" : "Boolean"
+       },
+       "studentCycleLost" : {
+            "type" : "Boolean"
+       },
+       "gasStoveLost" : {
+            "type" : "Boolean"
+       },
+       "gasCylinderLost" : {
+            "type" : "Boolean"
+       },
+       "mixerGrinderLost" : {
+            "type" : "Boolean"
+       },
+       "otherKitchenUtensilLost" : {
+            "type" : "String"
+       },
+       "landRecordLost" : {
+            "type" : "Boolean"
+       },
+       "aadharCardLost" : {
+            "type" : "Boolean"
+       },
+       "PANCardLost" : {
+            "type" : "Boolean"
+       },
+       "rationCardLost" : {
+            "type" : "Boolean"
+       },
+       "voterIdLost" : {
+            "type" : "Boolean"
+       },
+       "drivingLicenseLost" : {
+            "type" : "Boolean"
+       },
+       "educationalCertificatesLost" : {
+            "type" : "Boolean"
+       },
+       "passportLost" : {
+            "type" : "Boolean"
+       },
+       "birthCertificate" : {
+            "type" : "Boolean"
+       },
+       "deathCertificateLost" : {
+            "type" : "Boolean"
+       },
+       "marriageCertificateLost" : {
+            "type" : "Boolean"
+       },
+       "insurancePolicyLost" : {
+            "type" : "Boolean"
+       },
+       "otherDocumentsLost" : {
+            "type" : "String"
+       },
+       "lossOfAgriculture" : {
+            "type" : "String" 
+       },
+       "agricultureLoanAvailed" : {
+            "type" : "Boolean"
+       },
+       "floodLineInMeters" : {
+            "type" : "Number"
+       },
+       "anyoneMissingInFamily" : {
+            "type" : "Boolean"
+       },
+       "cowMissing" : {
+            "type" : "Boolean"  
+       },
+       "goatMissing" : {
+            "type" : "Boolean" 
+       }
+    },
+    "validations": [],
+    "relations": {
+      
+    },
+    "acls": [
+    ],
+    "methods": {}
+}

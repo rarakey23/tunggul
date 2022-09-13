@@ -1,0 +1,97 @@
+{
+    "name": "Job",
+    "plural": "jobs",
+    "base": "PersistedModel",
+    "idInjection": false,
+    "options": {
+        "validateUpsert": true
+    },
+    "properties": {
+        "userName": {
+            "type": "String"
+        },
+        "jobName": {
+            "type": "String"
+        },
+        "jobId": {
+            "type": "Number",
+            "description" : "Android Job Id, must be between 800 and 850"
+        },
+        "scheduleTime" : {
+            "type" : "Number"
+        },
+        "remarks" : {
+            "type" : "String"
+        },
+        "created" : {
+            "type" : "Number"
+        },
+        "cancelled" : {
+            "type" : "Boolean",
+            "default" : false
+        },
+        "userId": {
+            "type": "String"
+        }
+    },
+    "hidden" : ["userId"],
+    "relations": {
+        "user": {
+            "type": "belongsTo",
+            "model": "AppUser",
+            "primaryKey" : "id",
+            "foreignKey" : "userId"
+        }
+    },
+    "acls": [
+        {
+            "principalType": "ROLE",
+            "principalId": "$everyone",
+            "permission": "DENY",
+            "property": "*",
+            "accessType": "*"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "admin",
+            "permission": "ALLOW",
+            "property": "*",
+            "accessType": "*"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "admin",
+            "permission": "ALLOW",
+            "property": "create",
+            "accessType": "WRITE"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "admin",
+            "permission": "ALLOW",
+            "property": "update",
+            "accessType": "WRITE"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "admin",
+            "permission": "ALLOW",
+            "property": "delete",
+            "accessType": "WRITE"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$owner",
+            "permission": "ALLOW",
+            "accessType": "WRITE",
+            "property": "create"
+        },
+        {
+            "principalType": "ROLE",
+            "principalId": "$owner",
+            "permission": "ALLOW",
+            "accessType": "READ",
+            "property": "*"
+        }
+    ]
+}
